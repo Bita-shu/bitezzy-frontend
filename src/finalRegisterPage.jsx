@@ -76,7 +76,7 @@ function Register(){
         data.append("confirmPassword", regData.confirmPassword);
         data.append("age", regData.age);
         data.append("phone", regData.phone);
-        const response=await fetch(`http://13.239.252.125.sslip.io:8080/register/User-Detail/`,{
+        const response=await fetch(`/register/User-Detail/`,{
             method:"POST",
             body:data
         })
