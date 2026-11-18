@@ -7,7 +7,7 @@ function LoggedPage(){
    const [prof, setProf]=useState(false);
     useEffect(()=>{
    const submitionValidate= async (i)=>{
-        const response=await fetch(`https://13.239.252.125.sslip.io/user-detail/${email}`)
+        const response=await fetch(`https://13.239.252.125.sslip.io:8080/user-detail/${email}`)
        const userData=await response.json()
          if (response.ok) {
             setLogData(userData)
@@ -77,7 +77,7 @@ function LoggedPage(){
                 param.append("age", data.age);
                 param.append("phone", data.phone);
 
-                const response=await fetch(`https://13.239.252.125.sslip.io/Edit/user-profile/`, {
+                const response=await fetch(`https://13.239.252.125.sslip.io:8080/Edit/user-profile/`, {
                     method:"PUT",
                     body:param
                 })
@@ -106,7 +106,7 @@ function LoggedPage(){
             }
 
             try {
-                const response=await fetch(`https://13.239.252.125.sslip.io/delete/user-account/${email}`,{
+                const response=await fetch(`https://13.239.252.125.sslip.io:8080/delete/user-account/${email}`,{
                     method:"DELETE"
                 })
                 const message=await response.text();
