@@ -1,0 +1,611 @@
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #0f172a 45%, #020617 100%);
+}
+.card{
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06), 0 0 20px rgba(99, 102, 241, 0.01);
+  transition: transform 0.3s ease, box-shodow 0.3s ease;
+}
+.card:hover{
+transform: translateY(-5px);
+box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(99, 102, 241, 0.2);
+}
+.dash-card{
+  max-width: 560px;
+  text-align: center;
+}
+.title{
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing:-0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  background-clip: texti;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.sub{
+  font-size: 14px;
+  color: #94a2b8;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.inputgroup{
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+ margin-bottom: 20px;
+ text-align: left;
+}
+.label{
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.5px;
+}
+.custom-input{
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: black;
+  font-size: 14px;
+  outline: auto;
+  transition: all 0.25 ease;
+}
+.custom-input::placeholder{
+  color: #475569;
+}
+.custom-input:focus{
+  border-color: #818cf8;
+  background-color: rgba(2, 6, 23, 0.85,);
+  box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.2);
+}
+.btn-pry{
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg,#6366f1 0%, #4f46e5 50%, #4338ca 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(99,102,241,0.35);
+  transition: all 0.25s ease;
+  margin-top: 8px;
+}
+.btn-pry:hover{
+  background: linear-gradient(135deg,#4f46e5 0%,#4338ca 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(99,102, 241, 0.5);
+}
+.btn-sec{
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255,255, 0.15);
+  background-color: transparent;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+}
+.btn-sec:hover{
+  background-color: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+.btn-danger{
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-danger:hover{
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 14px 30px rgba(239, 68, 68, 0.5);
+  transform: translateY(-1px);
+}
+.Link{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+.app-link{
+  font-size: 13px;
+  color: #818cf8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.app-link:hover{
+  color: #c084fc;
+  text-decoration: underline;
+}
+.footer{
+  font-size: 14px;
+  color: #b4dbdd;
+  text-align: center;
+  margin-top: 20px;
+}
+.error{
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.divider-box{
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+}
+.divider-line{
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255,255,255,0.1);
+}
+.divider-text{
+  padding: 0 12px;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.social{
+display: flex;
+gap: 12px;
+}
+.social-btn{
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background-color: rgba(2,6,23,0.5);
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.social-btn:hover{
+  background-color: rgba(30,41,59,0.08);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+.google{
+  color: #ea4335;
+  font-weight: 800;
+  margin-right: 8px;
+}
+.facebook{
+  color: #3b82f6;
+  font-weight: 800;
+  margin: 8px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Dynamic Dark Lux Background */
+.landing-container {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 50% 20%, #1c1917 0%, #0c0a09 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Dark Navy Background matching Login Page */
+.landing-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #0b1120;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+/* Dark Floating Card with Rounded Corners */
+.hero-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 44px 36px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Frame */
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.brand-logo {
+  width: 180px;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Typography matching "Welcome Back" header style */
+.brand-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.gold-text {
+  color: #f59e0b;
+}
+
+.brand-subtitle {
+  color: #9ca3af;
+  font-size: 0.92rem;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Primary Button matching Sign In styling */
+.btn-primary {
+  background: #3b82f6;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Secondary Button matching Input field dark tone */
+.btn-secondary {
+  background: #1f2937;
+  color: #e5e7eb;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #374151;
+  color: #ffffff;
+}
+/* Hidden actual file input */
+.hidden-file-input {
+  display: none;
+}
+
+/* Custom styled trigger button for file upload */
+.file-upload-wrapper {
+  width: 100%;
+}
+
+.custom-file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(2, 6, 23, 0.5);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.custom-file-btn:hover {
+  background-color: rgba(30, 41, 59, 0.5);
+  border-color: #818cf8;
+  color: #ffffff;
+}
+
+.file-name {
+  color: #818cf8;
+  font-weight: 600;
+  word-break: break-all;
+}
+/* Instagram-Style Profile Avatar Container */
+.profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-ring {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 50%;
+  padding: 3px; /* Ring Gradient Border */
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0f172a; /* Dark background gap */
+}
+
+.default-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  border: 3px solid #0f172a;
+}
+
+/* Action Buttons Container */
+.action-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* Enhancements for side-by-side or stacked buttons */
+.action-button-group .btn-sec {
+  margin-top: 0; /* Resets default margin-top from App.css */
+}
+
+.action-button-group .btn-danger {
+  width: 100%;
+}
+.gett{
+visibility:visible;
+}
+.container {
+  background: radial-gradient(circle at 80% 20%, #686776 0%, #7ca6b0 45%, #262d4b 100%);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+ 
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* Welcome header styling */
+.welcomeHeader {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Action button container */
+.actionContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Edit / General Action Button */
+.editButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: #2980b9;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.label {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs and File upload */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #3498db;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Disabled input styling */
+.input:disabled {
+  background-color: #f1f2f6;
+  color: black;
+  cursor: not-allowed;
+}
+
+/* Profile Image Preview */
+.profileImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #3498db;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Error Message Span */
+.errorText {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Save Changes Button */
+.saveButton {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: #27ae60;
+}
+
+/* Delete Account Button */
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+.deleteContainer {
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.anotherContainer{
+  display: flexbox;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.anotherEditBack{
+  background-color: #0c0c0c81;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.anotherEditBack:hover{
+  background-color: #2980b9;
+}
+.profileDiv{
+  padding: 350px;
+}
+.profileShower{
+  background: linear-gradient(45deg, #ee7d04, #f4480a, #ed082b, #f70365, #fd03ae);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: flex;
+  margin: 0px 300px;
+  justify-content: right;
+  align-items: center;
+
+}
+.mainClass{
+ background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #0f172a 45%, #020617 100%);
+ padding: 10px;
+}
