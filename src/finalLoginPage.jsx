@@ -71,6 +71,8 @@ function LoginPage(){
 
                 <div>
                     <form onSubmit={submitionForm}>
+                         <label> Summa:</label>
+                         <input type="text"/>
                         <label>Enter UserEmail</label>
                         <input type="email" name="email" id="emailID" placeholder="Email" value={data.email} onChange={handleChange}/>
                          {error.email && <span style={{color:"red"}}>{error.email}</span>}<br/><br/>
@@ -81,6 +83,7 @@ function LoginPage(){
                             <Link >forgot Password</Link>
                         </div><br/>
                         <button type="submit">Submit</button>
+                          
                     </form>
                        <p>Did'nt have an account? <Link to="/registerPage">Register</Link></p>
                 </div>

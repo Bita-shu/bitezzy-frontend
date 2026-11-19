@@ -66,7 +66,7 @@ let Verification = function(){
                 <h3>Verify the Email with OTP</h3>
 
                 <form onSubmit={submitValidation}>
-                    <label>Email:</label>
+                    <label>Emaill:</label>
                     <input type="email" name="email" value={verData.email} onChange={handleChange}/>
                     {error.email && <span style={{color:"red"}}>{error.email}</span>}
                     <label>Enter OTP: </label>
