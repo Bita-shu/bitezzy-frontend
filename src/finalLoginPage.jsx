@@ -37,7 +37,7 @@ function LoginPage(){
          setError({})
         try {
             
-        const response=await fetch(`https://13.239.252.sslip.io/Login-page/` ,{
+        const response=await fetch(`https://13.239.252.125.sslip.io/Login-page/` ,{
             method:"post",
            headers:{"Content-Type": "application/json"},
            body:JSON.stringify(data)

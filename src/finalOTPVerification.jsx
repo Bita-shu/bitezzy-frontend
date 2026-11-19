@@ -35,7 +35,7 @@ let Verification = function(){
         param.append("email", verData.email)
         param.append("otp", verData.otp)
 
-        const response =await fetch(`https://13.239.252.sslip.io/OTP-verification/`,{
+        const response =await fetch(`https://13.239.252.125.sslip.io/OTP-verification/`,{
             method:"POST",
             headers:{"Content-Type":"application/x-www-form-urlencoded"},
             body:param.toString()
