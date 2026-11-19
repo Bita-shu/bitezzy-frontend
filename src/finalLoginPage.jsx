@@ -37,7 +37,7 @@ function LoginPage(){
          setError({})
         try {
             
-        const response=await fetch(`/Login-page/` ,{
+        const response=await fetch(`${process.env.REACT_APP_API_BASE_URL}/Login-page/` ,{
             method:"post",
            headers:{"Content-Type": "application/json"},
            body:JSON.stringify(data)
