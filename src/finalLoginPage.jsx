@@ -30,7 +30,7 @@ function LoginPage(){
     }else if (data.password.length<6) {
         err.password="Password must be in greater than 6 letters"
     }
-    if (Object.keys(err).length>0) {
+    if (Object.keys(err).length>0) {  
         setError(err)
     }else{
         
