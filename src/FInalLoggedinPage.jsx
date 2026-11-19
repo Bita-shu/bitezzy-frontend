@@ -8,8 +8,9 @@ function LoggedPage(){
     useEffect(()=>{
    const submitionValidate= async (i)=>{
         const response=await fetch(`https://13.239.252.125.sslip.io/user-detail/${email}`)
-       const userData=await response.json()
+       
          if (response.ok) {
+            const userData=await response.json()
             setLogData(userData)
          }
     }
@@ -34,7 +35,7 @@ function LoggedPage(){
                 phone: logData.phone ||""
             });
         }
-    }, [logData, data])
+    }, [logData])
     const handleChange=(i)=>{
         const{name,value}=i.target
         setData({...data,[name]:value})
@@ -64,6 +65,7 @@ function LoggedPage(){
         }
         if (Object.keys(err).length>0) {
             setError(err)
+            return;
         } else {
             setError({})
             try { 
