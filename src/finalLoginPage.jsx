@@ -45,7 +45,7 @@ function LoginPage(){
         const message=await response.text();
         if (response.ok) {
         
-            navi("/User-LoggedPage")
+            navi("/User-LoggedPage" , {state : {email: data.email}})
         }else{
             
             setError({})

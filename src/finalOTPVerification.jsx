@@ -53,11 +53,8 @@ let Verification = function(){
             else if (message.includes("Please")) {
                 backendErr.otp=message
             }
-        
             setError(backendErr)
-
         }
-
       }
     }
     return(

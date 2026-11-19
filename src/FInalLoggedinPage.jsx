@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
 import "./Demo.module.css"
+import { useLocation } from "react-router-dom"
 function LoggedPage(){
+    const location=useLocation();
     const[logData,setLogData]=useState({})
-   const email=localStorage.getItem("email")
+   const email=location.state?.email;
    const [isEdit, setIsEdit]=useState(false);
    const [prof, setProf]=useState(false);
     useEffect(()=>{
    const submitionValidate= async (i)=>{
-        const response=await fetch(`https://13.239.252.125.sslip.io/user-detail/${email}`)
+        const response=await fetch(`https://13.239.252.125.sslip.io/user-detail/${encodeURIComponent(email)}`)
        
          if (response.ok) {
             const userData=await response.json()
@@ -106,7 +108,6 @@ function LoggedPage(){
             if (!confirm) {
                 return;
             }
-
             try {
                 const response=await fetch(`https://13.239.252.125.sslip.io/delete/user-account/${email}`,{
                     method:"DELETE"
@@ -126,8 +127,6 @@ function LoggedPage(){
             } catch (error) {
                 console.error("Error occured in the delete validation : ", error)
             }
-         
-
         }
     return(
         <div className="mainClass">
@@ -224,7 +223,8 @@ function LoggedPage(){
         </div> }
       
     </div>
-        </div>) : (<div className="profileDiv"><button type="button" className="profileShower" onClick={()=>{setProf(true)}}>User Profile</button> </div>  )}
+        </div>) : (<div className="profileDiv"><button type="button" className="profileShower" onClick={()=>{setProf(true)}}>User Profile</button>
+         </div>  )}
       </div>
 );
 }
