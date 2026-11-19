@@ -71,8 +71,7 @@ function LoginPage(){
 
                 <div>
                     <form onSubmit={submitionForm}>
-                         <label> Summa:</label>
-                         <input type="text"/>
+                       
                         <label>Enter UserEmail</label>
                         <input type="email" name="email" id="emailID" placeholder="Email" value={data.email} onChange={handleChange}/>
                          {error.email && <span style={{color:"red"}}>{error.email}</span>}<br/><br/>
